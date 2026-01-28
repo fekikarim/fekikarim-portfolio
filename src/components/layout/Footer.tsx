@@ -2,9 +2,9 @@ import { Github, Linkedin, Mail } from "lucide-react";
 import logo from "@/assets/kf-logo.png";
 
 const socialLinks = [
-  { icon: Github, href: "https://github.com/karimfeki", label: "GitHub" },
-  { icon: Linkedin, href: "https://linkedin.com/in/karimfeki", label: "LinkedIn" },
-  { icon: Mail, href: "mailto:contact@karimfeki.dev", label: "Email" },
+  { icon: Github, href: "https://github.com/fekikarim/", label: "GitHub" },
+  { icon: Linkedin, href: "https://www.linkedin.com/in/karimfeki/", label: "LinkedIn" },
+  { icon: Mail, href: "mailto:feki.karim28@gmail.com", label: "Email" },
 ];
 
 const navLinks = [

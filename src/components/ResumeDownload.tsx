@@ -5,10 +5,10 @@ import { useRef } from "react";
 const resumeData = {
   name: "Karim Feki",
   title: "Full-Stack Developer • Mobile Engineer • UI/UX Designer",
-  email: "contact@karimfeki.dev",
+  email: "feki.karim28@gmail.com",
   location: "Tunis, Tunisia",
   linkedin: "linkedin.com/in/karimfeki",
-  github: "github.com/karimfeki",
+  github: "github.com/fekikarim",
   summary:
     "Highly motivated, results-oriented computer engineering student with strong expertise in mobile, web, and desktop application development. Combines software architecture, UI/UX design, and scalable system engineering with a focus on delivering user-centric, high-performance digital solutions.",
   education: {
