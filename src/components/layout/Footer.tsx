@@ -1,5 +1,4 @@
 import { Github, Linkedin, Mail } from "lucide-react";
-import logo from "@/assets/kf-logo.png";
 
 const socialLinks = [
   { icon: Github, href: "https://github.com/fekikarim/", label: "GitHub" },
@@ -33,7 +32,7 @@ export function Footer() {
           <div className="flex flex-col items-center md:items-start gap-4">
             <div className="flex items-center gap-3">
               <img
-                src={logo}
+                src="/assets/kf-logo.png"
                 alt="KF Logo"
                 className="w-10 h-10 rounded-lg object-cover"
               />

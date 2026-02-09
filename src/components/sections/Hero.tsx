@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ResumeDownload } from "@/components/ResumeDownload";
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
-import profileImage from "@/assets/karim-feki.png";
 
 const socialLinks = [
   { icon: Github, href: "https://github.com/fekikarim/", label: "GitHub" },
@@ -84,7 +83,7 @@ export function Hero() {
               {/* Image Container */}
               <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-card shadow-2xl">
                 <img
-                  src={profileImage}
+                  src="/assets/karim-feki.png"
                   alt="Karim Feki"
                   className="w-full h-full object-cover"
                 />

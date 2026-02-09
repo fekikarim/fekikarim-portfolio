@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/kf-logo.png";
 
 const navLinks = [
   { href: "#about", label: "About" },
@@ -47,7 +46,7 @@ export function Header() {
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           >
             <img
-              src={logo}
+              src="/assets/kf-logo.png"
               alt="KF Logo"
               className="w-10 h-10 rounded-lg object-cover transition-transform duration-300 group-hover:scale-105"
             />
