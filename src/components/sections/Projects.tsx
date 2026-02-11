@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import { SectionHeader } from "@/components/ui/section-header";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { Calendar, Users } from "lucide-react";
@@ -9,7 +10,7 @@ const projects = [
     period: "Nov 2025 – Jan 2026",
     organization: "ESPRIT",
     description:
-      "A comprehensive cross-platform educational mobile application designed for students and teachers, featuring course exploration, interactive quizzes, gamification elements, and real-time messaging.",
+      "Cross-platform learning platform for ESPRIT students and teachers with a structured learning flow, real-time messaging, and AI-assisted content generation. Built with MVVM architecture, modular services, and secure authentication to ensure maintainability and performance across iOS and Android.",
     features: [
       "iOS: SwiftUI | Android: Kotlin + Jetpack Compose",
       "MVVM architecture with clean separation of concerns",
@@ -19,6 +20,16 @@ const projects = [
       "Secure authentication flows",
     ],
     technologies: ["SwiftUI", "Kotlin", "Jetpack Compose", "Socket.IO", "AI Integration"],
+    links: [
+      {
+        label: "iOS Repo",
+        href: "https://github.com/fekikarim/TacheLik_iosApp",
+      },
+      {
+        label: "Android Repo",
+        href: "https://github.com/fekikarim/TacheLik_androidApp",
+      },
+    ],
     color: "from-primary/20 to-primary/5",
   },
   {
@@ -27,7 +38,7 @@ const projects = [
     period: "Jun 2025 – Aug 2025",
     organization: "STAR ASSURANCES",
     description:
-      "Enterprise-level platform designed to boost sales engagement through gamification. Features real-time challenge tracking, rankings, rewards, and comprehensive performance analytics.",
+      "Challenge management system for STAR Assurance that improves sales engagement through real-time tracking, rankings, and rewards. Designed around a robust UML model with scalable backend services and a Flutter interface tailored to agents and regional managers.",
     features: [
       "Complete UML class diagram design",
       "Real-time challenge tracking & rankings",
@@ -37,6 +48,20 @@ const projects = [
       "Scalable backend architecture",
     ],
     technologies: ["Flutter", "Node.js", "Express.js", "SQLite", "REST API"],
+    links: [
+      {
+        label: "Backend",
+        href: "https://github.com/fekikarim/starChallenge_backend",
+      },
+      {
+        label: "Dashboard",
+        href: "https://github.com/fekikarim/starChallenge_dashboard",
+      },
+      {
+        label: "Frontend",
+        href: "https://github.com/fekikarim/star_frontend",
+      },
+    ],
     color: "from-primary/15 to-primary/5",
   },
   {
@@ -45,7 +70,7 @@ const projects = [
     period: "Feb 2025 – Jun 2025",
     organization: "ESPRIT / be.net",
     description:
-      "A full-stack platform built with Symfony 6.4 promoting environmental sustainability. Features AI-powered content generation, interactive quizzes, marketplace, and community collaboration tools.",
+      "Sustainable resource management platform built with Symfony 6.4 and PHP 8.1+ featuring AI-assisted content generation, environmental challenges, and analytics. Delivered an eco-focused UI/UX, secure watermarking, and multi-auth flows to support community collaboration and marketplace features.",
     features: [
       "Symfony 6.4 & PHP 8.1+ architecture",
       "AI-powered content generation (Gemini AI)",
@@ -55,6 +80,16 @@ const projects = [
       "Comprehensive admin panel",
     ],
     technologies: ["Symfony", "PHP 8.1+", "Gemini AI", "OAuth", "MySQL"],
+    links: [
+      {
+        label: "GitHub",
+        href: "https://github.com/fekikarim/econet",
+      },
+      {
+        label: "Demo Video",
+        href: "https://www.youtube.com/watch?v=TldqTb1ZuK0",
+      },
+    ],
     color: "from-primary/10 to-primary/5",
   },
 ];
@@ -106,6 +141,18 @@ export function Projects() {
                       <p className="text-foreground/80 mb-6 leading-relaxed">
                         {project.description}
                       </p>
+
+                      {project.links && project.links.length > 0 && (
+                        <div className="flex flex-wrap gap-2 mb-6">
+                          {project.links.map((link) => (
+                            <Button key={link.href} variant="outline" size="sm" asChild>
+                              <a href={link.href} target="_blank" rel="noopener noreferrer">
+                                {link.label}
+                              </a>
+                            </Button>
+                          ))}
+                        </div>
+                      )}
 
                       {/* Technologies */}
                       <div className="flex flex-wrap gap-2">
