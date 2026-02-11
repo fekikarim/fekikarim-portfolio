@@ -1,7 +1,21 @@
 import { Button } from "@/components/ui/button";
 import { SectionHeader } from "@/components/ui/section-header";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
-import { Calendar, Users } from "lucide-react";
+import { Calendar, Github, ExternalLink, Play, Users } from "lucide-react";
+
+const getLinkIcon = (href: string, label: string) => {
+  const normalized = `${label} ${href}`.toLowerCase();
+
+  if (normalized.includes("github")) {
+    return Github;
+  }
+
+  if (normalized.includes("youtube") || normalized.includes("video")) {
+    return Play;
+  }
+
+  return ExternalLink;
+};
 
 const projects = [
   {
@@ -147,7 +161,15 @@ export function Projects() {
                           {project.links.map((link) => (
                             <Button key={link.href} variant="outline" size="sm" asChild>
                               <a href={link.href} target="_blank" rel="noopener noreferrer">
-                                {link.label}
+                                {(() => {
+                                  const Icon = getLinkIcon(link.href, link.label);
+                                  return (
+                                    <>
+                                      <Icon className="w-4 h-4" />
+                                      {link.label}
+                                    </>
+                                  );
+                                })()}
                               </a>
                             </Button>
                           ))}
