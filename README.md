@@ -1,6 +1,11 @@
 # Karim Feki — Portfolio
 
 <p align="center">
+	<img src="https://img.shields.io/badge/Portfolio-Modern%20UI-0B1220?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio" />
+	<img src="https://img.shields.io/badge/Status-Active-16A34A?style=for-the-badge&logo=githubactions&logoColor=white" alt="Status" />
+</p>
+
+<p align="center">
 	<a href="https://www.linkedin.com/in/karimfeki/" target="_blank" rel="noreferrer">
 		<img src="https://img.shields.io/badge/LinkedIn-Karim%20Feki-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
 	</a>
@@ -20,15 +25,24 @@
 	<img src="https://img.shields.io/badge/shadcn%2Fui-Components-000000?style=flat-square&logo=shadcnui&logoColor=white" alt="shadcn/ui" />
 </p>
 
-Modern, responsive portfolio built with **Vite + React + TypeScript**, styled with **Tailwind CSS** and **shadcn/ui**, featuring smooth section navigation, theming, and a clean component architecture.
+Modern, responsive portfolio built with **Vite + React + TypeScript**, styled with **Tailwind CSS** and **shadcn/ui**, and refined with a clean component architecture, smooth motion, and polished UI/UX.
 
 ## ✨ Highlights
 
-- **Single-page experience** with sections: Hero, About, Experience, Projects, Skills, Contact
-- **Dark/Light mode** via theme provider + toggle
-- **Modern UI primitives** (Radix + shadcn/ui) and Tailwind design system
-- **Vite** dev server + fast builds
-- **Vitest** configured for testing
+- **Single-page flow** with Hero, About, Experience, Projects, Skills, Contact
+- **Modern UI system** powered by Tailwind + shadcn/ui + Radix primitives
+- **Smooth motion** with scroll reveal and hover-lift interactions
+- **Performance-first** build (Vite) and strong typing (TypeScript)
+- **Dark/Light** theming via ThemeProvider
+
+## 🧭 Sections
+
+- **Hero** — Personal identity, CTA, social links
+- **About** — Background and profile overview
+- **Experience** — Timeline with certificate previews
+- **Projects** — Featured work with links and structured highlights
+- **Skills** — Core technical stack
+- **Contact** — Direct email and social links
 
 ## 🧱 Tech Stack
 
@@ -38,7 +52,6 @@ Modern, responsive portfolio built with **Vite + React + TypeScript**, styled wi
 - **Styling**: Tailwind CSS + tailwindcss-animate
 - **UI**: shadcn/ui + Radix UI + lucide-react icons
 - **Routing**: react-router-dom
-- **Data Layer (ready)**: @tanstack/react-query
 - **Testing**: Vitest + Testing Library
 
 ## 🚀 Getting Started
@@ -59,7 +72,7 @@ npm install
 npm run dev
 ```
 
-Vite will start the dev server (configured on port **8080**).
+Vite will start the dev server on port **8080**.
 
 ## 🧪 Scripts
 
@@ -80,15 +93,16 @@ npm run test:watch # Vitest in watch mode
 - `src/components/ui/*` — shadcn/ui components
 - `src/lib/utils.ts` — shared utilities
 
-## 🔗 Links
+## 📨 Contact
 
+- Website: https://karimfeki.is-a.dev
 - LinkedIn: https://www.linkedin.com/in/karimfeki/
 - GitHub: https://github.com/fekikarim/
 - Email: feki.karim28@gmail.com
 
-## 🛠️ Notes
+## 📄 License
 
-This repository can be edited locally in any IDE.
+This project is licensed under the MIT License. See [LICENSE](LICENSE).
 
 ---
 
