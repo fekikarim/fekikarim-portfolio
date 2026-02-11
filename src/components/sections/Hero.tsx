@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ResumeDownload } from "@/components/ResumeDownload";
+import { ContactMeLink } from "@/components/ContactMeLink";
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 
 const socialLinks = [
@@ -54,7 +54,7 @@ export function Hero() {
               >
                 View My Work
               </Button>
-              <ResumeDownload />
+              <ContactMeLink />
             </div>
 
             {/* Social Links */}

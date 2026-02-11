@@ -3,7 +3,7 @@ import { Mail } from "lucide-react";
 
 const CONTACT_EMAIL = "feki.karim28@gmail.com";
 
-export function ResumeDownload() {
+export function ContactMeLink() {
   return (
     <Button
       variant="hero-outline"
