@@ -1,60 +1,73 @@
-# Karim Feki — Portfolio
+# Karim Feki Portfolio
 
 <p align="center">
-	<img src="https://img.shields.io/badge/Portfolio-Modern%20UI-0B1220?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio" />
+	<img src="https://img.shields.io/badge/Product-Portfolio-0B1220?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio" />
 	<img src="https://img.shields.io/badge/Status-Active-16A34A?style=for-the-badge&logo=githubactions&logoColor=white" alt="Status" />
+	<img src="https://img.shields.io/badge/Vite-5.4-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
+	<img src="https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=0B0B0B" alt="React" />
+	<img src="https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
 </p>
 
 <p align="center">
-	<a href="https://www.linkedin.com/in/karimfeki/" target="_blank" rel="noreferrer">
-		<img src="https://img.shields.io/badge/LinkedIn-Karim%20Feki-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
-	</a>
-	<a href="https://github.com/fekikarim/" target="_blank" rel="noreferrer">
-		<img src="https://img.shields.io/badge/GitHub-fekikarim-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
-	</a>
-	<a href="mailto:feki.karim28@gmail.com">
-		<img src="https://img.shields.io/badge/Email-feki.karim28%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
-	</a>
+	<a href="https://karimfeki.is-a.dev" target="_blank" rel="noreferrer">Live Site</a>
+	·
+	<a href="https://www.linkedin.com/in/karimfeki/" target="_blank" rel="noreferrer">LinkedIn</a>
+	·
+	<a href="https://github.com/fekikarim/" target="_blank" rel="noreferrer">GitHub</a>
+	·
+	<a href="mailto:feki.karim28@gmail.com">Email</a>
 </p>
 
-<p align="center">
-	<img src="https://img.shields.io/badge/Vite-5.4-646CFF?style=flat-square&logo=vite&logoColor=white" alt="Vite" />
-	<img src="https://img.shields.io/badge/React-18-61DAFB?style=flat-square&logo=react&logoColor=0B0B0B" alt="React" />
-	<img src="https://img.shields.io/badge/TypeScript-5-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
-	<img src="https://img.shields.io/badge/Tailwind%20CSS-3-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white" alt="Tailwind CSS" />
-	<img src="https://img.shields.io/badge/shadcn%2Fui-Components-000000?style=flat-square&logo=shadcnui&logoColor=white" alt="shadcn/ui" />
-</p>
+A modern, product-ready personal portfolio built with Vite, React, and TypeScript. Designed for clarity and polish, with a component-driven architecture, smooth motion, and a refined UI system.
 
-Modern, responsive portfolio built with **Vite + React + TypeScript**, styled with **Tailwind CSS** and **shadcn/ui**, and refined with a clean component architecture, smooth motion, and polished UI/UX.
+## Table of contents
 
-## ✨ Highlights
+- Overview
+- Demos
+- Features
+- Tech stack
+- Getting started
+- Scripts
+- Project structure
+- Customization
+- Deployment
+- Accessibility
+- Testing
+- Contact
+- License
 
-- **Single-page flow** with Hero, About, Experience, Projects, Skills, Contact
-- **Modern UI system** powered by Tailwind + shadcn/ui + Radix primitives
-- **Smooth motion** with scroll reveal and hover-lift interactions
-- **Performance-first** build (Vite) and strong typing (TypeScript)
-- **Dark/Light** theming via ThemeProvider
+## Overview
 
-## 🧭 Sections
+This portfolio is a single-page experience highlighting identity, experience, projects, and contact details. It is designed to be fast, accessible, and easy to customize for new content or branding.
 
-- **Hero** — Personal identity, CTA, social links
-- **About** — Background and profile overview
-- **Experience** — Timeline with certificate previews
-- **Projects** — Featured work with links and structured highlights
-- **Skills** — Core technical stack
-- **Contact** — Direct email and social links
+## Demos
 
-## 🧱 Tech Stack
+Preview the current production look and feel. Images are served from `public/demo`.
 
-- **Framework**: React 18
-- **Build Tooling**: Vite 5
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS + tailwindcss-animate
-- **UI**: shadcn/ui + Radix UI + lucide-react icons
-- **Routing**: react-router-dom
-- **Testing**: Vitest + Testing Library
+| Theme | Preview |
+| --- | --- |
+| Light | ![Portfolio light theme](public/demo/portfolio-light.png) |
+| Dark | ![Portfolio dark theme](public/demo/portfolio-dark.png) |
 
-## 🚀 Getting Started
+## Features
+
+- Single-page flow with hero, about, experience, projects, skills, and contact
+- Theme-aware UI with light and dark modes
+- Smooth motion via scroll reveal and hover-lift interactions
+- Reusable section and layout primitives for fast iteration
+- Strong typing with TypeScript and modern linting
+
+## Tech stack
+
+- Framework: React 18
+- Build tooling: Vite 5
+- Language: TypeScript
+- Styling: Tailwind CSS + tailwindcss-animate
+- UI: shadcn/ui + Radix UI + lucide-react
+- Routing: react-router-dom
+- Testing: Vitest + Testing Library
+
+## Getting started
 
 ### Prerequisites
 
@@ -72,9 +85,9 @@ npm install
 npm run dev
 ```
 
-Vite will start the dev server on port **8080**.
+The dev server runs on port 8080.
 
-## 🧪 Scripts
+## Scripts
 
 ```bash
 npm run dev        # Start dev server
@@ -85,25 +98,57 @@ npm run test       # Vitest (CI-style)
 npm run test:watch # Vitest in watch mode
 ```
 
-## 📁 Project Structure (high level)
+## Project structure
 
-- `src/pages/Index.tsx` — main page composition
-- `src/components/sections/*` — page sections (Hero/About/Experience/Projects/Skills/Contact)
-- `src/components/layout/*` — Header + Footer
-- `src/components/ui/*` — shadcn/ui components
-- `src/lib/utils.ts` — shared utilities
+- `src/pages/Index.tsx` - main page composition
+- `src/components/sections/*` - page sections
+- `src/components/layout/*` - layout primitives
+- `src/components/ui/*` - shared UI components
+- `src/lib/utils.ts` - shared utilities
 
-## 📨 Contact
+## Customization
+
+- Update content in `src/components/sections/*`.
+- Adjust the theme in `src/components/ThemeProvider.tsx`.
+- Replace demo media under `public/demo` and update the table in this README.
+
+## Deployment
+
+Build the production bundle:
+
+```bash
+npm run build
+```
+
+Preview the production build locally:
+
+```bash
+npm run preview
+```
+
+Deploy the output in `dist` to any static hosting provider.
+
+## Accessibility
+
+- Semantic layout sections and consistent heading structure
+- Keyboard-friendly focus styles and interactive components
+- Color contrast designed for both light and dark themes
+
+## Testing
+
+Run unit and component tests:
+
+```bash
+npm run test
+```
+
+## Contact
 
 - Website: https://karimfeki.is-a.dev
 - LinkedIn: https://www.linkedin.com/in/karimfeki/
 - GitHub: https://github.com/fekikarim/
 - Email: feki.karim28@gmail.com
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License. See [LICENSE](LICENSE).
-
----
-
-Built to showcase craft, clarity, and continuous growth.
