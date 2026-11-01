@@ -1,111 +1,164 @@
-import { Button } from "@/components/ui/button";
-import { ContactMeLink } from "@/components/ContactMeLink";
-import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
+import { Action, Balloon, Sheet, TitleBlock } from "@/components/drawing/Sheet";
+import { MAILTO, socialLinks } from "@/lib/profile";
 
-const socialLinks = [
-  { icon: Github, href: "https://github.com/fekikarim/", label: "GitHub" },
-  { icon: Linkedin, href: "https://www.linkedin.com/in/karimfeki/", label: "LinkedIn" },
-  { icon: Mail, href: "mailto:feki.karim28@gmail.com", label: "Email" },
+const disciplines = [
+  { title: "Native iOS", detail: "SwiftUI", top: "16%" },
+  { title: "Android", detail: "Kotlin · Jetpack Compose", top: "38%" },
+  { title: "Cross-platform & Web", detail: "Flutter · React", top: "60%" },
+  { title: "Backend", detail: "Node.js · Symfony · Spring Boot", top: "82%" },
 ];
 
 export function Hero() {
-  const handleScrollToAbout = () => {
-    document.querySelector("#about")?.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-      {/* Background Elements */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-float" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-float" style={{ animationDelay: "1.5s" }} />
-      </div>
-
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Text Content */}
-          <div className="text-center lg:text-left order-2 lg:order-1">
-            <div className="animate-fade-in">
-              <span className="inline-block mb-4 px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-primary/10 text-primary">
-                Available for opportunities
-              </span>
-            </div>
-
-            <h1 className="animate-fade-in text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground mb-6" style={{ animationDelay: "0.1s" }}>
-              Hi, I'm{" "}
-              <span className="text-gradient">Karim Feki</span>
+    <div id="top" className="container pt-4 pb-10 sm:pt-6 lg:pb-16">
+      <Sheet
+        zones
+        as="div"
+        innerClassName="grid lg:grid-cols-12"
+      >
+        {/* Statement */}
+        <div className="lg:col-span-7 flex flex-col justify-center gap-12 p-5 py-8 sm:p-8 lg:p-12">
+          <div>
+            <h1 className="display text-[clamp(3.25rem,10vw,6rem)] text-foreground">
+              Karim
+              <br />
+              Feki
             </h1>
+            <p className="mt-6 text-lg sm:text-xl font-medium text-foreground">
+              Full-Stack Developer, Mobile Engineer and UI/UX Designer
+            </p>
+            <p className="mt-4 max-w-[54ch] text-base sm:text-lg leading-relaxed text-muted-foreground">
+              Computer Engineering student at ESPRIT University building scalable, user-centred web and
+              mobile applications to production-grade standards.
+            </p>
 
-            <div className="opacity-0 animate-fade-in" style={{ animationDelay: "0.2s" }}>
-              <p className="text-xl md:text-2xl font-medium text-muted-foreground mb-2">
-                Full-Stack Developer • Mobile Engineer • UI/UX Designer
-              </p>
-              <p className="text-base md:text-lg text-muted-foreground/80 max-w-xl mx-auto lg:mx-0">
-                Computer Engineering student at ESPRIT University, specializing in building 
-                scalable, user-centric digital solutions with a focus on production-grade quality.
-              </p>
+            <div className="mt-8 flex flex-wrap items-center gap-3">
+              <Action href={MAILTO} className="lg:hidden">Email Karim</Action>
+              <Action href="#projects" variant="line">
+                View projects
+              </Action>
             </div>
+          </div>
 
-            <div className="opacity-0 animate-fade-in flex flex-wrap gap-4 justify-center lg:justify-start mt-8" style={{ animationDelay: "0.3s" }}>
-              <Button
-                variant="hero"
-                size="xl"
-                onClick={() => document.querySelector("#projects")?.scrollIntoView({ behavior: "smooth" })}
-              >
-                View My Work
-              </Button>
-              <ContactMeLink />
-            </div>
-
-            {/* Social Links */}
-            <div className="opacity-0 animate-fade-in flex gap-4 justify-center lg:justify-start mt-8" style={{ animationDelay: "0.4s" }}>
-              {socialLinks.map((social) => (
+          <ul className="flex flex-wrap gap-x-6 gap-y-2">
+            {socialLinks.slice(0, 2).map((social) => (
+              <li key={social.label}>
                 <a
-                  key={social.label}
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 rounded-full bg-card border border-border hover:border-primary/50 hover:bg-primary/10 transition-all duration-300 group"
-                  aria-label={social.label}
+                  className="lettering text-xs text-muted-foreground underline decoration-border hover:text-foreground hover:decoration-primary"
                 >
-                  <social.icon className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
+                  {social.label} {social.handle}
                 </a>
-              ))}
-            </div>
-          </div>
-
-          {/* Profile Image */}
-          <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
-            <div className="relative animate-fade-in" style={{ animationDelay: "0.2s" }}>
-              {/* Glow Effect */}
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-primary/10 rounded-full blur-2xl scale-110" />
-              
-              {/* Image Container */}
-              <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-card shadow-2xl">
-                <img
-                  src="/assets/karim-feki.png"
-                  alt="Karim Feki"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-
-              {/* Floating Badge */}
-              <div className="absolute -bottom-4 -right-4 sm:bottom-4 sm:right-0 glass px-4 py-2 rounded-full shadow-lg animate-float">
-                <span className="text-sm font-semibold text-foreground">🎓 ESPRIT University</span>
-              </div>
-            </div>
-          </div>
+              </li>
+            ))}
+          </ul>
         </div>
 
-        {/* Scroll Indicator */}
-        <button
-          onClick={handleScrollToAbout}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 p-2 rounded-full border border-border hover:border-primary/50 transition-colors animate-bounce"
-          aria-label="Scroll to about section"
-        >
-          <ArrowDown className="w-5 h-5 text-muted-foreground" />
-        </button>
-      </div>
-    </section>
+        {/* Figure + title block */}
+        <div className="lg:col-span-5 flex flex-col border-t border-border lg:border-t-0 lg:border-l">
+          <figure className="flex-1 flex flex-col justify-center p-5 sm:p-8 lg:p-10">
+            <div className="relative">
+              <div className="relative w-full max-w-[300px] sm:max-w-[360px] mx-auto xl:mx-0 xl:w-[60%]">
+                <div className="relative aspect-square overflow-hidden border border-rule bg-muted">
+                  <img
+                    src="/assets/karim-feki.webp"
+                    alt="Portrait of Karim Feki"
+                    width={800}
+                    height={800}
+                    {...{ fetchpriority: "high" }}
+                    decoding="async"
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+                {/* Item balloons on the figure edge (compact screens; the legend below references them) */}
+                {disciplines.map((d, i) => (
+                  <Balloon
+                    key={d.title}
+                    n={i + 1}
+                    className="xl:hidden absolute -right-3 -translate-y-1/2"
+                    style={{ top: d.top }}
+                  />
+                ))}
+              </div>
+
+              {/* Assembly callouts (wide screens): leaders start on the figure with a dot terminator */}
+              <ol className="hidden xl:block absolute inset-y-0 left-[calc(60%-2rem)] right-0" aria-label="Disciplines">
+                {disciplines.map((d, i) => (
+                  <li
+                    key={d.title}
+                    className="absolute left-0 right-0 -translate-y-1/2 flex items-center"
+                    style={{ top: d.top }}
+                  >
+                    <span aria-hidden className="h-1.5 w-1.5 shrink-0 rounded-full bg-primary-foreground ring-1 ring-rule" />
+                    <span aria-hidden className="h-px w-10 shrink-0 bg-rule dark:bg-primary" />
+                    <Balloon n={i + 1} />
+                    <span className="ml-3 min-w-0">
+                      <span className="block lettering text-[11px] text-foreground">{d.title}</span>
+                      <span className="block text-xs text-muted-foreground">{d.detail}</span>
+                    </span>
+                  </li>
+                ))}
+              </ol>
+            </div>
+
+            {/* Legend (compact screens) */}
+            <ol className="xl:hidden mt-8 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4" aria-label="Disciplines">
+              {disciplines.map((d, i) => (
+                <li key={d.title} className="flex items-start gap-3">
+                  <Balloon n={i + 1} />
+                  <span>
+                    <span className="block lettering text-[11px] text-foreground">{d.title}</span>
+                    <span className="block text-sm text-muted-foreground">{d.detail}</span>
+                  </span>
+                </li>
+              ))}
+            </ol>
+
+            <figcaption className="mt-6 lettering text-[11px] text-muted-foreground">
+              Fig. 1 — Karim Feki, Tunis
+            </figcaption>
+          </figure>
+
+          {/* Cover-sheet title block */}
+          <TitleBlock
+            className="grid-cols-2 sm:grid-cols-4 lg:grid-cols-2 xl:grid-cols-4 border-l-0"
+            cells={[
+              {
+                label: "Status",
+                value: (
+                  <span className="inline-flex items-center gap-2">
+                    <span aria-hidden className="h-2 w-2 rounded-full bg-primary" />
+                    Open to internships
+                  </span>
+                ),
+                className: "sm:col-span-2 lg:col-span-1 xl:col-span-2",
+              },
+              { label: "Location", value: "Tunis, Tunisia", className: "sm:col-span-2 lg:col-span-1 xl:col-span-2" },
+              { label: "Education", value: "ESPRIT University", className: "sm:col-span-2 lg:col-span-1 xl:col-span-2" },
+              { label: "Specialisation", value: "Computer & Mobile Systems", className: "sm:col-span-2 lg:col-span-1 xl:col-span-2" },
+              { label: "Drawn by", value: "K. Feki" },
+              { label: "Dwg no.", value: <span className="tabular-nums">KF-00</span> },
+              { label: "Sheet", value: <span className="tabular-nums">1 of 6</span>, className: "col-span-2" },
+            ]}
+          />
+          <a
+            href={MAILTO}
+            className="group flex min-h-14 items-center justify-between gap-4 bg-primary px-4 text-primary-foreground transition-colors duration-200 hover:bg-foreground hover:text-background"
+          >
+            <span>
+              <span className="block lettering text-[11px] opacity-80">Approve · Contact</span>
+              <span className="block text-base font-semibold">Email Karim</span>
+            </span>
+            <ArrowUpRight
+              className="h-5 w-5 transition-transform duration-300 ease-out-expo group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+              strokeWidth={1.75}
+            />
+          </a>
+        </div>
+      </Sheet>
+    </div>
   );
 }

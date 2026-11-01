@@ -9,9 +9,9 @@ import { Contact } from "@/components/sections/Contact";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-[100dvh]">
       <Header />
-      <main>
+      <main id="main">
         <Hero />
         <About />
         <Experience />

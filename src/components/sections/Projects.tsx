@@ -1,7 +1,5 @@
-import { Button } from "@/components/ui/button";
-import { SectionHeader } from "@/components/ui/section-header";
-import { ScrollReveal } from "@/components/ui/scroll-reveal";
-import { Calendar, Github, ExternalLink, Play, Users } from "lucide-react";
+import { ArrowUpRight, Github, Play } from "lucide-react";
+import { Sheet, SheetHeader, TitleBlock } from "@/components/drawing/Sheet";
 
 const getLinkIcon = (href: string, label: string) => {
   const normalized = `${label} ${href}`.toLowerCase();
@@ -14,207 +12,158 @@ const getLinkIcon = (href: string, label: string) => {
     return Play;
   }
 
-  return ExternalLink;
+  return ArrowUpRight;
 };
 
 const projects = [
   {
+    code: "KF-03.1",
     title: "Tâche-Lik",
-    subtitle: "Cross-Platform Mobile Learning Platform",
+    subtitle: "Cross-platform mobile learning platform",
     period: "Nov 2025 – Jan 2026",
     organization: "ESPRIT",
     description:
-      "Cross-platform learning platform for ESPRIT students and teachers with a structured learning flow, real-time messaging, and AI-assisted content generation. Built with MVVM architecture, modular services, and secure authentication to ensure maintainability and performance across iOS and Android.",
+      "A learning platform for ESPRIT students and teachers with a structured learning flow, real-time messaging and AI-assisted content generation. Built on MVVM with modular services and secure authentication, for maintainability and performance on both iOS and Android.",
     features: [
-      "iOS: SwiftUI | Android: Kotlin + Jetpack Compose",
-      "MVVM architecture with clean separation of concerns",
-      "Real-time messaging via Socket.IO",
+      "iOS in SwiftUI; Android in Kotlin with Jetpack Compose",
+      "MVVM architecture with a clean separation of concerns",
+      "Real-time messaging over Socket.IO",
       "AI-assisted quiz and content generation",
-      "Badges, leaderboards & progress tracking",
+      "Badges, leaderboards and progress tracking",
       "Secure authentication flows",
     ],
-    technologies: ["SwiftUI", "Kotlin", "Jetpack Compose", "Socket.IO", "AI Integration"],
+    technologies: ["SwiftUI", "Kotlin", "Jetpack Compose", "Socket.IO", "AI integration"],
     links: [
-      {
-        label: "iOS Repo",
-        href: "https://github.com/fekikarim/TacheLik_iosApp",
-      },
-      {
-        label: "Android Repo",
-        href: "https://github.com/fekikarim/TacheLik_androidApp",
-      },
+      { label: "iOS repository", href: "https://github.com/fekikarim/TacheLik_iosApp" },
+      { label: "Android repository", href: "https://github.com/fekikarim/TacheLik_androidApp" },
     ],
-    color: "from-primary/20 to-primary/5",
   },
   {
+    code: "KF-03.2",
     title: "STAR Challenge Platform",
-    subtitle: "Enterprise Sales Gamification System",
+    subtitle: "Enterprise sales gamification system",
     period: "Jun 2025 – Aug 2025",
-    organization: "STAR ASSURANCES",
+    organization: "STAR Assurances",
     description:
-      "Challenge management system for STAR Assurance that improves sales engagement through real-time tracking, rankings, and rewards. Designed around a robust UML model with scalable backend services and a Flutter interface tailored to agents and regional managers.",
+      "A challenge management system for STAR Assurances that lifts sales engagement through real-time tracking, rankings and rewards. Designed from a complete UML model, with scalable backend services and a Flutter interface tailored to agents and regional managers.",
     features: [
       "Complete UML class diagram design",
-      "Real-time challenge tracking & rankings",
+      "Real-time challenge tracking and rankings",
       "Performance analytics dashboards",
-      "Role-based access for agents & managers",
-      "Flutter frontend optimized for mobile",
+      "Role-based access for agents and managers",
+      "Flutter front end optimised for mobile",
       "Scalable backend architecture",
     ],
     technologies: ["Flutter", "Node.js", "Express.js", "SQLite", "REST API"],
     links: [
-      {
-        label: "Backend",
-        href: "https://github.com/fekikarim/starChallenge_backend",
-      },
-      {
-        label: "Dashboard",
-        href: "https://github.com/fekikarim/starChallenge_dashboard",
-      },
-      {
-        label: "Frontend",
-        href: "https://github.com/fekikarim/star_frontend",
-      },
+      { label: "Backend", href: "https://github.com/fekikarim/starChallenge_backend" },
+      { label: "Dashboard", href: "https://github.com/fekikarim/starChallenge_dashboard" },
+      { label: "Front end", href: "https://github.com/fekikarim/star_frontend" },
     ],
-    color: "from-primary/15 to-primary/5",
   },
   {
+    code: "KF-03.3",
     title: "eco.net",
-    subtitle: "Sustainable Resource Management Platform",
+    subtitle: "Sustainable resource management platform",
     period: "Feb 2025 – Jun 2025",
     organization: "ESPRIT / be.net",
     description:
-      "Sustainable resource management platform built with Symfony 6.4 and PHP 8.1+ featuring AI-assisted content generation, environmental challenges, and analytics. Delivered an eco-focused UI/UX, secure watermarking, and multi-auth flows to support community collaboration and marketplace features.",
+      "A sustainable resource management platform on Symfony 6.4 and PHP 8.1+ with AI-assisted content generation, environmental challenges and analytics. Delivered an eco-focused interface, secure watermarking and multiple sign-in methods to support community collaboration and a marketplace.",
     features: [
-      "Symfony 6.4 & PHP 8.1+ architecture",
+      "Symfony 6.4 and PHP 8.1+ architecture",
       "AI-powered content generation (Gemini AI)",
-      "Environmental challenges & quizzes",
+      "Environmental challenges and quizzes",
       "Secure watermarking system",
-      "Multi-auth: Email, Google, GitHub OAuth",
+      "Sign-in with email, Google or GitHub OAuth",
       "Comprehensive admin panel",
     ],
     technologies: ["Symfony", "PHP 8.1+", "Gemini AI", "OAuth", "MySQL"],
     links: [
-      {
-        label: "GitHub",
-        href: "https://github.com/fekikarim/econet",
-      },
-      {
-        label: "Demo Video",
-        href: "https://www.youtube.com/watch?v=TldqTb1ZuK0",
-      },
+      { label: "GitHub", href: "https://github.com/fekikarim/econet" },
+      { label: "Demo video", href: "https://www.youtube.com/watch?v=TldqTb1ZuK0" },
     ],
-    color: "from-primary/10 to-primary/5",
   },
 ];
 
 export function Projects() {
   return (
-    <section id="projects" className="section-padding">
-      <div className="container mx-auto px-4 md:px-6">
-        <ScrollReveal>
-          <SectionHeader
-            badge="Projects"
-            title="Featured Work"
-            description="Production-grade applications showcasing technical depth and design excellence"
-          />
-        </ScrollReveal>
+    <div className="container py-10 lg:py-16">
+      <Sheet id="projects" labelledBy="projects-title">
+        <SheetHeader
+          id="projects-title"
+          title="Projects"
+          lede="Three systems across native mobile, cross-platform and web, with their source code open for review."
+          drawing="Project sheets"
+          number="KF-03"
+          sheet="4 of 6"
+        />
 
-        <div className="grid gap-8 md:gap-10">
-          {projects.map((project, index) => (
-            <ScrollReveal key={project.title} delay={index * 150}>
-              <div className="relative glass rounded-2xl overflow-hidden hover-lift group">
-                {/* Gradient Background */}
-                <div
-                  className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-50 group-hover:opacity-70 transition-opacity`}
-                />
+        {projects.map((project) => (
+          <article
+            key={project.code}
+            aria-labelledby={`${project.code}-title`}
+            className="grid border-b border-rule last:border-b-0 lg:grid-cols-12"
+          >
+            {/* Description */}
+            <div className="lg:col-span-7 p-5 sm:p-8 lg:p-10">
+              <h3 id={`${project.code}-title`} className="display text-[clamp(1.75rem,3.6vw,2.75rem)] text-foreground">
+                {project.title}
+              </h3>
+              <p className="mt-3 text-lg font-medium text-primary">{project.subtitle}</p>
+              <p className="mt-5 max-w-[62ch] text-base leading-relaxed text-foreground">{project.description}</p>
 
-                <div className="relative p-6 md:p-8 lg:p-10">
-                  <div className="grid lg:grid-cols-5 gap-6 lg:gap-10">
-                    {/* Content */}
-                    <div className="lg:col-span-3">
-                      {/* Header */}
-                      <div className="flex flex-wrap items-center gap-3 mb-4">
-                        <span className="inline-flex items-center gap-1 text-xs font-medium text-primary bg-primary/10 px-2.5 py-1 rounded-full">
-                          <Calendar className="w-3 h-3" />
-                          {project.period}
-                        </span>
-                        <span className="inline-flex items-center gap-1 text-xs text-muted-foreground">
-                          <Users className="w-3 h-3" />
-                          {project.organization}
-                        </span>
-                      </div>
+              <ul className="mt-8 flex flex-wrap gap-2" aria-label={`${project.title} links`}>
+                {project.links.map((link) => {
+                  const Icon = getLinkIcon(link.href, link.label);
+                  return (
+                    <li key={link.href}>
+                      <a
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group inline-flex min-h-11 items-center gap-2 border border-rule px-4 py-2 text-sm font-semibold text-foreground transition-colors duration-200 hover:bg-foreground hover:text-background"
+                      >
+                        <Icon className="h-4 w-4" strokeWidth={1.5} />
+                        {link.label}
+                        <ArrowUpRight
+                          aria-hidden
+                          className="h-3.5 w-3.5 text-muted-foreground transition-transform duration-300 ease-out-expo group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-background"
+                          strokeWidth={1.5}
+                        />
+                        <span className="sr-only">(opens in a new tab)</span>
+                      </a>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
 
-                      <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-1">
-                        {project.title}
-                      </h3>
-                      <p className="text-lg text-primary font-medium mb-4">
-                        {project.subtitle}
-                      </p>
-
-                      <p className="text-foreground/80 mb-6 leading-relaxed">
-                        {project.description}
-                      </p>
-
-                      {project.links && project.links.length > 0 && (
-                        <div className="flex flex-wrap gap-2 mb-6">
-                          {project.links.map((link) => (
-                            <Button key={link.href} variant="outline" size="sm" asChild>
-                              <a href={link.href} target="_blank" rel="noopener noreferrer">
-                                {(() => {
-                                  const Icon = getLinkIcon(link.href, link.label);
-                                  return (
-                                    <>
-                                      <Icon className="w-4 h-4" />
-                                      {link.label}
-                                    </>
-                                  );
-                                })()}
-                              </a>
-                            </Button>
-                          ))}
-                        </div>
-                      )}
-
-                      {/* Technologies */}
-                      <div className="flex flex-wrap gap-2">
-                        {project.technologies.map((tech) => (
-                          <span
-                            key={tech}
-                            className="px-3 py-1.5 text-xs font-semibold bg-card/80 text-foreground rounded-lg border border-border/50"
-                          >
-                            {tech}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-
-                    {/* Features */}
-                    <div className="lg:col-span-2">
-                      <div className="glass-strong rounded-xl p-5">
-                        <h4 className="text-sm font-semibold text-foreground uppercase tracking-wider mb-4">
-                          Key Features
-                        </h4>
-                        <ul className="space-y-2.5">
-                          {project.features.map((feature, i) => (
-                            <li
-                              key={i}
-                              className="flex items-start gap-2 text-sm text-foreground/80"
-                            >
-                              <span className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 flex-shrink-0" />
-                              {feature}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            {/* Notes + title block */}
+            <div className="lg:col-span-5 flex flex-col border-t border-border lg:border-t-0 lg:border-l">
+              <div className="flex-1 p-5 sm:p-8 lg:p-10">
+                <h4 className="lettering text-xs text-muted-foreground">General notes</h4>
+                <ol className="mt-4 space-y-2.5">
+                  {project.features.map((feature, i) => (
+                    <li key={feature} className="grid grid-cols-[1.75rem_1fr] text-[15px] leading-snug text-foreground">
+                      <span className="tabular-nums text-muted-foreground">{i + 1}.</span>
+                      {feature}
+                    </li>
+                  ))}
+                </ol>
               </div>
-            </ScrollReveal>
-          ))}
-        </div>
-      </div>
-    </section>
+              <TitleBlock
+                className="grid-cols-2 border-l-0"
+                cells={[
+                  { label: "Dwg no.", value: <span className="tabular-nums">{project.code}</span> },
+                  { label: "Date", value: <span className="tabular-nums">{project.period}</span> },
+                  { label: "For", value: project.organization, className: "col-span-2" },
+                  { label: "Material", value: project.technologies.join(" · "), className: "col-span-2" },
+                ]}
+              />
+            </div>
+          </article>
+        ))}
+      </Sheet>
+    </div>
   );
 }
