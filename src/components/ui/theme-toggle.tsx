@@ -1,34 +1,33 @@
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
-import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 
 export function ThemeToggle() {
-  const { theme, setTheme } = useTheme();
+  const { resolvedTheme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     setMounted(true);
   }, []);
 
-  if (!mounted) {
-    return (
-      <Button variant="ghost" size="icon" className="relative">
-        <Sun className="h-5 w-5" />
-      </Button>
-    );
-  }
+  const isDark = mounted && resolvedTheme === "dark";
 
   return (
-    <Button
-      variant="ghost"
-      size="icon"
-      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-      className="relative overflow-hidden"
-      aria-label="Toggle theme"
+    <button
+      type="button"
+      onClick={() => setTheme(isDark ? "light" : "dark")}
+      className="relative h-10 w-10 overflow-hidden border border-border text-foreground transition-colors duration-200 hover:border-rule hover:bg-accent"
+      aria-label={isDark ? "Switch to light theme" : "Switch to dark theme"}
+      title={isDark ? "Paper (light)" : "Blueprint (dark)"}
     >
-      <Sun className={`h-5 w-5 transition-all duration-300 ${theme === "dark" ? "rotate-90 scale-0" : "rotate-0 scale-100"}`} />
-      <Moon className={`absolute h-5 w-5 transition-all duration-300 ${theme === "dark" ? "rotate-0 scale-100" : "-rotate-90 scale-0"}`} />
-    </Button>
+      <Sun
+        strokeWidth={1.5}
+        className={`absolute inset-0 m-auto h-[18px] w-[18px] transition-transform duration-500 ease-out-expo ${isDark ? "rotate-90 scale-0" : "rotate-0 scale-100"}`}
+      />
+      <Moon
+        strokeWidth={1.5}
+        className={`absolute inset-0 m-auto h-[18px] w-[18px] transition-transform duration-500 ease-out-expo ${isDark ? "rotate-0 scale-100" : "-rotate-90 scale-0"}`}
+      />
+    </button>
   );
 }
