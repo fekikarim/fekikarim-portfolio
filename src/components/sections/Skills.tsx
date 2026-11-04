@@ -3,27 +3,39 @@ import { Balloon, Sheet, SheetHeader } from "@/components/drawing/Sheet";
 const skillCategories = [
   {
     title: "Languages",
-    skills: ["JavaScript", "TypeScript", "Python", "PHP", "Java", "Kotlin", "Swift", "Dart"],
+    skills: ["TypeScript", "JavaScript", "Java", "Python", "Kotlin", "Swift", "Dart", "PHP", "C"],
   },
   {
-    title: "Frontend",
-    skills: ["React.js", "Next.js", "SwiftUI", "Jetpack Compose", "Flutter", "Tailwind CSS"],
+    title: "Web",
+    skills: ["React.js", "Next.js", "Angular", "Tailwind CSS", "Framer Motion", "HTML & CSS", "Multilingual & RTL"],
   },
   {
-    title: "Backend",
-    skills: ["Node.js", "Express.js", "Spring Boot", "Symfony", "Firebase"],
+    title: "Mobile & desktop",
+    skills: ["SwiftUI", "Jetpack Compose", "Flutter", "Flet"],
+  },
+  {
+    title: "Backend & APIs",
+    skills: ["Node.js", "Express.js", "Spring Boot", "FastAPI", "Symfony", "REST APIs", "WebSocket & STOMP", "Socket.IO"],
   },
   {
     title: "Databases",
-    skills: ["MySQL", "PostgreSQL", "MongoDB", "SQLite", "Firebase Realtime DB"],
+    skills: ["PostgreSQL", "MySQL", "SQLite", "MongoDB", "Supabase", "Firebase", "Row-Level Security"],
   },
   {
-    title: "Tools & practices",
-    skills: ["Git", "Docker", "REST API", "Agile/Scrum", "UI/UX Design", "Figma"],
+    title: "AI & documents",
+    skills: ["OpenAI GPT", "Google Gemini", "PyTorch", "Diffusion models", "NLP", "OCR (Tesseract)", "PyMuPDF"],
   },
   {
-    title: "Architecture",
-    skills: ["MVVM", "Clean Architecture", "Microservices", "Design Patterns", "UML"],
+    title: "Security & architecture",
+    skills: ["RBAC", "JWT", "MVVM", "Clean Architecture", "Microservices", "Design Patterns", "UML"],
+  },
+  {
+    title: "Blockchain & Web3",
+    skills: ["Hedera", "Hashgraph", "Smart contracts", "Solidity", "Tokenization"],
+  },
+  {
+    title: "Tools & delivery",
+    skills: ["Git", "Docker", "Netlify", "AWS", "SEO", "Agile/Scrum", "UI/UX Design", "Figma"],
   },
 ];
 
@@ -36,8 +48,8 @@ export function Skills() {
           title="Skills"
           lede="The working toolkit, listed as a bill of materials."
           drawing="Bill of materials"
-          number="KF-04"
-          sheet="5 of 6"
+          number="KF-05"
+          sheet="6 of 7"
         />
 
         <table className="w-full border-collapse text-left">

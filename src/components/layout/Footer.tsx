@@ -25,7 +25,7 @@ export function Footer() {
           </ul>
         </nav>
         <p className="border-r border-b border-rule p-4 text-muted-foreground sm:col-span-2 lg:col-span-3">
-          © {currentYear} Karim Feki. Designed and built in Tunis.
+          © {currentYear} Karim Feki. All rights reserved.
         </p>
       </div>
     </footer>

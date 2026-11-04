@@ -38,8 +38,9 @@ Single-page site at https://karimfeki.is-a.dev. Visitors arrive from LinkedIn, G
 
 ## Evidence on Hand
 
-- Experience: STAR Assurances (Jun–Aug 2025), Tunisie Telecom (Jun–Jul 2023), with certificates in `public/certifs/`.
-- Projects: Tâche-Lik (iOS + Android repos), STAR Challenge Platform (backend, dashboard, frontend repos), eco.net (repo + YouTube demo).
+- Experience: STEG Tunisie (Jul–Aug 2026), STAR Assurances (Jun–Aug 2025), Tunisie Telecom (Jun–Jul 2023), with certificates in `public/certifs/`.
+- Certifications (Oct 2026): NVIDIA Generative AI with Diffusion Models, AWS Academy Graduate Cloud Foundations, Hedera HCDA, HBF and HCF, with documents in `public/certifs/` and previews in `public/certifs/previews/`.
+- Projects: Fight Zone (co-led, live), Farmy (Team Be.net), Mallouka Motors website (solo, live) and management system, Tâche-Lik, STAR Challenge Platform, eco.net, HireUp (Team Be.net, CDIO 2024 top project), The World Within (KANM Team). Data in `src/lib/projects.ts`.
 - Social: GitHub @fekikarim, LinkedIn @karimfeki, Instagram @karimfeki.co, Facebook @KarimFeki.co.
 - No testimonials, metrics, or client names beyond the above; do not fabricate any.
 

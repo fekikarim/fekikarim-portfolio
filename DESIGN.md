@@ -235,7 +235,16 @@ Experience is a revision table: a revision letter in a 44px ruled square, then p
 A 24px circle with a frame-rule border, paper fill and an 11px semibold tabular numeral. It numbers items: disciplines, BOM rows.
 
 ### Navigation
-A sticky 4rem bar on the paper ground with a frame-rule underline. Links are Label type in graphite, turning ink on hover. The active section gets a 2px blue underline that scales in from the left and sits on the header's bottom rule. A square 40px theme toggle (hairline border, sun/moon swap) and a blue Email action sit on the right. Mobile: a 40px bordered hamburger drawn from two 1px lines opens a full-screen menu of condensed Title-sized links divided by hairlines, ending in a full-width blue Email bar.
+A sticky 4rem bar on the paper ground with a frame-rule underline. The header Email action shows from lg; between md and lg the six links need the room, and every sheet's title block still carries Email. Links are Label type in graphite, turning ink on hover. The active section gets a 2px blue underline that scales in from the left and sits on the header's bottom rule. A square 40px theme toggle (hairline border, sun/moon swap) and a blue Email action sit on the right. Mobile: a 40px bordered hamburger drawn from two 1px lines opens a full-screen menu of condensed Title-sized links divided by hairlines, ending in a full-width blue Email bar.
+
+### Part tags
+Technologies and skills are listed as parts: square 1px hairline rectangles on the paper ground, 13px normal-width text. They sit under a "Material" label (projects, experience) or in a "Scope" column (certifications). Never rounded, never filled with blue.
+
+### Registers
+Certifications and the project index are registers: ruled rows or a hairline cell grid (`gap-px` over the hairline colour), each row numbered by a balloon or a drawing number. The project register links each entry to its sheet. Earlier projects (2023–2024) are drawn as compact cells with a native `details` disclosure for their general notes.
+
+### Document viewer
+One modal for every document on file (internship certificates and credentials). Full screen on phones, a framed sheet with the viewer lift from sm up. The stage is Vellum Grey and shows a WebP preview rendered from the original, so one-page PDFs display on every device without a PDF engine. The toolbar has zoom (Fit, 150%, 200%, 300%; + − 0 keys, double-click, drag to pan) and previous/next navigation (arrow keys). The details panel holds Open original, Download, Verify (only when a verification URL appears on the document itself), the issuer title block, credential ID with copy, description and skills. Nothing loads until the viewer opens. The original file is checked with a HEAD request. Loads time out after 15s, and failures fall back to an error panel with retry and open-original actions. Focus returns to the opening button.
 
 ### Footer
 A tiled title-block strip in frame-rule cells: identity, label-type nav, and a credit line.

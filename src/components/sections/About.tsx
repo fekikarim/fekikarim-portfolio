@@ -18,7 +18,7 @@ export function About() {
           lede="An engineer who pairs technical rigour with design thinking."
           drawing="General arrangement"
           number="KF-01"
-          sheet="2 of 6"
+          sheet="2 of 7"
         />
 
         <div className="grid lg:grid-cols-12">

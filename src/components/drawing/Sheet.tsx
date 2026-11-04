@@ -177,3 +177,19 @@ export function Action({ href, children, className, variant = "primary", externa
     </a>
   );
 }
+
+/** Parts list: technologies or skills as ruled, square tags. */
+export function PartTags({ items, label, className }: { items: string[]; label: string; className?: string }) {
+  return (
+    <ul aria-label={label} className={cn("flex flex-wrap gap-1.5", className)}>
+      {items.map((item) => (
+        <li
+          key={item}
+          className="border border-border bg-background px-2 py-0.5 text-[13px] leading-5 text-foreground"
+        >
+          {item}
+        </li>
+      ))}
+    </ul>
+  );
+}

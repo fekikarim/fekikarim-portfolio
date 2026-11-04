@@ -141,7 +141,7 @@ export function Hero() {
               { label: "Specialisation", value: "Computer & Mobile Systems", className: "sm:col-span-2 lg:col-span-1 xl:col-span-2" },
               { label: "Drawn by", value: "K. Feki" },
               { label: "Dwg no.", value: <span className="tabular-nums">KF-00</span> },
-              { label: "Sheet", value: <span className="tabular-nums">1 of 6</span>, className: "col-span-2" },
+              { label: "Sheet", value: <span className="tabular-nums">1 of 7</span>, className: "col-span-2" },
             ]}
           />
           <a

@@ -11,8 +11,8 @@ export function Contact() {
           title="Contact"
           lede="Open to internship opportunities and ambitious projects."
           drawing="Approval"
-          number="KF-05"
-          sheet="6 of 6"
+          number="KF-06"
+          sheet="7 of 7"
         />
 
         <div className="grid lg:grid-cols-12">
@@ -37,8 +37,8 @@ export function Contact() {
                   { label: "Drawn by", value: "Karim Feki" },
                   { label: "Checked", value: "Karim Feki" },
                   {
-                    label: "Approved by",
-                    value: <span className="text-muted-foreground">Awaiting your email</span>,
+                    label: "Availability",
+                    value: "Open to internship opportunities",
                     className: "col-span-2",
                   },
                 ]}

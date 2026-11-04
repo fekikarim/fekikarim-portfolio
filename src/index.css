@@ -169,6 +169,8 @@
     background: hsl(var(--rule));
     transition: transform 1.1s var(--ease-out);
     pointer-events: none;
+    /* Drawn above filled cells, so the frame is never painted over */
+    z-index: 1;
   }
 
   .plot-line[data-axis="x"] {

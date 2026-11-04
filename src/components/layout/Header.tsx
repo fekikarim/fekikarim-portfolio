@@ -86,7 +86,7 @@ export function Header() {
           <ThemeToggle />
           <a
             href={MAILTO}
-            className="hidden md:inline-flex h-10 items-center bg-primary px-4 text-sm font-semibold text-primary-foreground transition-colors duration-200 hover:bg-foreground hover:text-background"
+            className="hidden lg:inline-flex h-10 items-center whitespace-nowrap bg-primary px-4 text-sm font-semibold text-primary-foreground transition-colors duration-200 hover:bg-foreground hover:text-background"
           >
             Email Karim
           </a>
