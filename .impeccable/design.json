@@ -1,0 +1,490 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-01T02:22:36.666873+00:00",
+  "title": "Design System: Karim Feki Portfolio",
+  "extensions": {
+    "colorMeta": {
+      "drafting-blue": {
+        "role": "primary",
+        "displayName": "Drafting Blue",
+        "canonical": "hsl(224 74% 45%)",
+        "tonalRamp": [
+          "hsl(224 44% 15%)",
+          "hsl(224 44% 25%)",
+          "hsl(224 74% 35%)",
+          "hsl(224 74% 45%)",
+          "hsl(224 74% 55%)",
+          "hsl(224 74% 65%)",
+          "hsl(224 44% 80%)",
+          "hsl(224 44% 95%)"
+        ]
+      },
+      "drafting-blue-deep": {
+        "role": "primary",
+        "displayName": "Drafting Blue Deep",
+        "canonical": "hsl(224 74% 30%)",
+        "tonalRamp": [
+          "hsl(224 44% 15%)",
+          "hsl(224 44% 25%)",
+          "hsl(224 74% 35%)",
+          "hsl(224 74% 45%)",
+          "hsl(224 74% 55%)",
+          "hsl(224 74% 65%)",
+          "hsl(224 44% 80%)",
+          "hsl(224 44% 95%)"
+        ]
+      },
+      "drafting-blue-wash": {
+        "role": "primary",
+        "displayName": "Drafting Blue Wash",
+        "canonical": "hsl(222 60% 93%)",
+        "tonalRamp": [
+          "hsl(222 36% 15%)",
+          "hsl(222 36% 25%)",
+          "hsl(222 60% 35%)",
+          "hsl(222 60% 45%)",
+          "hsl(222 60% 55%)",
+          "hsl(222 60% 65%)",
+          "hsl(222 36% 80%)",
+          "hsl(222 36% 95%)"
+        ]
+      },
+      "drafting-paper": {
+        "role": "neutral",
+        "displayName": "Drafting Paper",
+        "canonical": "hsl(160 8% 96%)",
+        "tonalRamp": [
+          "hsl(160 5% 15%)",
+          "hsl(160 5% 25%)",
+          "hsl(160 8% 35%)",
+          "hsl(160 8% 45%)",
+          "hsl(160 8% 55%)",
+          "hsl(160 8% 65%)",
+          "hsl(160 5% 80%)",
+          "hsl(160 5% 95%)"
+        ]
+      },
+      "sheet-white": {
+        "role": "neutral",
+        "displayName": "Sheet White",
+        "canonical": "hsl(160 10% 98.5%)",
+        "tonalRamp": [
+          "hsl(160 6% 15%)",
+          "hsl(160 6% 25%)",
+          "hsl(160 10% 35%)",
+          "hsl(160 10% 45%)",
+          "hsl(160 10% 55%)",
+          "hsl(160 10% 65%)",
+          "hsl(160 6% 80%)",
+          "hsl(160 6% 95%)"
+        ]
+      },
+      "drawing-ink": {
+        "role": "neutral",
+        "displayName": "Drawing Ink",
+        "canonical": "hsl(216 22% 9%)",
+        "tonalRamp": [
+          "hsl(216 13% 15%)",
+          "hsl(216 13% 25%)",
+          "hsl(216 22% 35%)",
+          "hsl(216 22% 45%)",
+          "hsl(216 22% 55%)",
+          "hsl(216 22% 65%)",
+          "hsl(216 13% 80%)",
+          "hsl(216 13% 95%)"
+        ]
+      },
+      "graphite": {
+        "role": "neutral",
+        "displayName": "Graphite",
+        "canonical": "hsl(216 12% 33%)",
+        "tonalRamp": [
+          "hsl(216 7% 15%)",
+          "hsl(216 7% 25%)",
+          "hsl(216 12% 35%)",
+          "hsl(216 12% 45%)",
+          "hsl(216 12% 55%)",
+          "hsl(216 12% 65%)",
+          "hsl(216 7% 80%)",
+          "hsl(216 7% 95%)"
+        ]
+      },
+      "vellum-grey": {
+        "role": "neutral",
+        "displayName": "Vellum Grey",
+        "canonical": "hsl(210 14% 91%)",
+        "tonalRamp": [
+          "hsl(210 8% 15%)",
+          "hsl(210 8% 25%)",
+          "hsl(210 14% 35%)",
+          "hsl(210 14% 45%)",
+          "hsl(210 14% 55%)",
+          "hsl(210 14% 65%)",
+          "hsl(210 8% 80%)",
+          "hsl(210 8% 95%)"
+        ]
+      },
+      "hairline": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "hsl(212 14% 80%)",
+        "tonalRamp": [
+          "hsl(212 8% 15%)",
+          "hsl(212 8% 25%)",
+          "hsl(212 14% 35%)",
+          "hsl(212 14% 45%)",
+          "hsl(212 14% 55%)",
+          "hsl(212 14% 65%)",
+          "hsl(212 8% 80%)",
+          "hsl(212 8% 95%)"
+        ]
+      },
+      "frame-rule": {
+        "role": "neutral",
+        "displayName": "Frame Rule",
+        "canonical": "hsl(216 18% 22%)",
+        "tonalRamp": [
+          "hsl(216 11% 15%)",
+          "hsl(216 11% 25%)",
+          "hsl(216 18% 35%)",
+          "hsl(216 18% 45%)",
+          "hsl(216 18% 55%)",
+          "hsl(216 18% 65%)",
+          "hsl(216 11% 80%)",
+          "hsl(216 11% 95%)"
+        ]
+      },
+      "grid-line": {
+        "role": "neutral",
+        "displayName": "Grid Line",
+        "canonical": "hsl(214 30% 45%)",
+        "tonalRamp": [
+          "hsl(214 18% 15%)",
+          "hsl(214 18% 25%)",
+          "hsl(214 30% 35%)",
+          "hsl(214 30% 45%)",
+          "hsl(214 30% 55%)",
+          "hsl(214 30% 65%)",
+          "hsl(214 18% 80%)",
+          "hsl(214 18% 95%)"
+        ]
+      },
+      "error-red": {
+        "role": "error",
+        "displayName": "Error Red",
+        "canonical": "hsl(0 72% 45%)",
+        "tonalRamp": [
+          "hsl(0 43% 15%)",
+          "hsl(0 43% 25%)",
+          "hsl(0 72% 35%)",
+          "hsl(0 72% 45%)",
+          "hsl(0 72% 55%)",
+          "hsl(0 72% 65%)",
+          "hsl(0 43% 80%)",
+          "hsl(0 43% 95%)"
+        ]
+      },
+      "blueprint-navy": {
+        "role": "neutral",
+        "displayName": "Blueprint Navy (dark ground)",
+        "canonical": "hsl(218 66% 14%)",
+        "tonalRamp": [
+          "hsl(218 40% 15%)",
+          "hsl(218 40% 25%)",
+          "hsl(218 66% 35%)",
+          "hsl(218 66% 45%)",
+          "hsl(218 66% 55%)",
+          "hsl(218 66% 65%)",
+          "hsl(218 40% 80%)",
+          "hsl(218 40% 95%)"
+        ]
+      },
+      "blueprint-sheet": {
+        "role": "neutral",
+        "displayName": "Blueprint Sheet (dark surface)",
+        "canonical": "hsl(218 60% 17%)",
+        "tonalRamp": [
+          "hsl(218 36% 15%)",
+          "hsl(218 36% 25%)",
+          "hsl(218 60% 35%)",
+          "hsl(218 60% 45%)",
+          "hsl(218 60% 55%)",
+          "hsl(218 60% 65%)",
+          "hsl(218 36% 80%)",
+          "hsl(218 36% 95%)"
+        ]
+      },
+      "blueprint-chalk": {
+        "role": "neutral",
+        "displayName": "Blueprint Chalk (dark ink)",
+        "canonical": "hsl(216 55% 94%)",
+        "tonalRamp": [
+          "hsl(216 33% 15%)",
+          "hsl(216 33% 25%)",
+          "hsl(216 55% 35%)",
+          "hsl(216 55% 45%)",
+          "hsl(216 55% 55%)",
+          "hsl(216 55% 65%)",
+          "hsl(216 33% 80%)",
+          "hsl(216 33% 95%)"
+        ]
+      },
+      "blueprint-cyan": {
+        "role": "primary",
+        "displayName": "Blueprint Cyan (dark accent)",
+        "canonical": "hsl(214 100% 80%)",
+        "tonalRamp": [
+          "hsl(214 60% 15%)",
+          "hsl(214 60% 25%)",
+          "hsl(214 100% 35%)",
+          "hsl(214 100% 45%)",
+          "hsl(214 100% 55%)",
+          "hsl(214 100% 65%)",
+          "hsl(214 60% 80%)",
+          "hsl(214 60% 95%)"
+        ]
+      },
+      "blueprint-faded": {
+        "role": "neutral",
+        "displayName": "Blueprint Faded (dark secondary text)",
+        "canonical": "hsl(216 38% 77%)",
+        "tonalRamp": [
+          "hsl(216 23% 15%)",
+          "hsl(216 23% 25%)",
+          "hsl(216 38% 35%)",
+          "hsl(216 38% 45%)",
+          "hsl(216 38% 55%)",
+          "hsl(216 38% 65%)",
+          "hsl(216 23% 80%)",
+          "hsl(216 23% 95%)"
+        ]
+      },
+      "blueprint-hairline": {
+        "role": "neutral",
+        "displayName": "Blueprint Hairline",
+        "canonical": "hsl(216 40% 32%)",
+        "tonalRamp": [
+          "hsl(216 24% 15%)",
+          "hsl(216 24% 25%)",
+          "hsl(216 40% 35%)",
+          "hsl(216 40% 45%)",
+          "hsl(216 40% 55%)",
+          "hsl(216 40% 65%)",
+          "hsl(216 24% 80%)",
+          "hsl(216 24% 95%)"
+        ]
+      },
+      "blueprint-rule": {
+        "role": "neutral",
+        "displayName": "Blueprint Rule",
+        "canonical": "hsl(214 60% 82%)",
+        "tonalRamp": [
+          "hsl(214 36% 15%)",
+          "hsl(214 36% 25%)",
+          "hsl(214 60% 35%)",
+          "hsl(214 60% 45%)",
+          "hsl(214 60% 55%)",
+          "hsl(214 60% 65%)",
+          "hsl(214 36% 80%)",
+          "hsl(214 36% 95%)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "The name on the cover sheet only."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Sheet titles in the sheet header."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Project names; mobile menu links."
+      },
+      "subtitle": {
+        "displayName": "Subtitle",
+        "purpose": "Role titles in the revision table."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Ledes and prose, 52-68ch."
+      },
+      "body-dense": {
+        "displayName": "Body Dense",
+        "purpose": "Lists, general notes, BOM parts, spec values."
+      },
+      "label": {
+        "displayName": "Lettering",
+        "purpose": "Title-block labels, table heads, zone markers, captions, nav."
+      }
+    },
+    "shadows": [
+      {
+        "name": "viewer-lift",
+        "value": "0 24px 60px -20px hsl(var(--foreground) / 0.35)",
+        "purpose": "Modal certificate viewer only; nothing in page flow casts a shadow."
+      }
+    ],
+    "motion": [
+      {
+        "name": "out-expo",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "All transforms: plotted frame lines, arrow nudge, nav underline, theme icon swap."
+      },
+      {
+        "name": "plot-frame",
+        "value": "transform 1.1s out-expo, delays 0/120/240/360ms",
+        "purpose": "Sheet frame lines draw in top, right, bottom, left on entry; content never waits."
+      },
+      {
+        "name": "state-color",
+        "value": "200ms (colors), 300ms (transforms)",
+        "purpose": "Hover fills to ink; arrows nudge 2px up-right; press scales to 0.98."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "durations 0.01ms",
+        "purpose": "prefers-reduced-motion collapses all animation and smooth scroll."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      },
+      {
+        "name": "xl",
+        "value": "1280px"
+      },
+      {
+        "name": "container-max",
+        "value": "1360px"
+      }
+    ],
+    "backgroundGrid": {
+      "value": "1px lines of --grid at 7% every 120px and 3.5% every 24px",
+      "purpose": "Drafting grid on the page ground in both themes."
+    }
+  },
+  "components": [
+    {
+      "name": "Primary Action",
+      "kind": "button",
+      "refersTo": "action-primary",
+      "description": "Blue filled action reserved for emailing Karim; fills with ink on hover.",
+      "html": "<a class=\"ds-action-primary\" href=\"#\"><span>Email Karim</span><span class=\"ds-action-primary__arrow\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M7 7h10v10\"/><path d=\"M7 17 17 7\"/></svg></span></a>",
+      "css": ".ds-action-primary{font-family:'Archivo Variable',ui-sans-serif,system-ui,sans-serif;display:inline-flex;align-items:center;gap:12px;min-height:44px;padding:8px 8px 8px 20px;background:hsl(var(--primary,224 74% 45%));color:hsl(var(--primary-foreground,0 0% 100%));font-size:14px;font-weight:600;text-decoration:none;border-radius:0;transition:background-color .3s cubic-bezier(0.16,1,0.3,1),color .3s cubic-bezier(0.16,1,0.3,1),transform .3s cubic-bezier(0.16,1,0.3,1);}.ds-action-primary__arrow{display:inline-flex;width:28px;height:28px;align-items:center;justify-content:center;background:rgba(255,255,255,.15);transition:transform .3s cubic-bezier(0.16,1,0.3,1);}.ds-action-primary:hover{background:hsl(var(--foreground,216 22% 9%));color:hsl(var(--background,160 8% 96%));}.ds-action-primary:hover .ds-action-primary__arrow{transform:translate(2px,-2px);}.ds-action-primary:active{transform:scale(.98);}.ds-action-primary:focus-visible{outline:2px solid hsl(var(--ring,224 74% 45%));outline-offset:3px;}"
+    },
+    {
+      "name": "Line Action",
+      "kind": "button",
+      "refersTo": "action-line",
+      "description": "Frame-rule outlined secondary link for projects, repos, demos and certificates.",
+      "html": "<a class=\"ds-action-line\" href=\"#\">View projects</a>",
+      "css": ".ds-action-line{font-family:'Archivo Variable',ui-sans-serif,system-ui,sans-serif;display:inline-flex;align-items:center;gap:12px;min-height:44px;padding:8px 16px;border:1px solid hsl(var(--rule,216 18% 22%));color:hsl(var(--foreground,216 22% 9%));background:transparent;font-size:14px;font-weight:600;text-decoration:none;border-radius:0;transition:background-color .3s cubic-bezier(0.16,1,0.3,1),color .3s cubic-bezier(0.16,1,0.3,1),transform .3s cubic-bezier(0.16,1,0.3,1);}.ds-action-line:hover{background:hsl(var(--foreground,216 22% 9%));color:hsl(var(--background,160 8% 96%));}.ds-action-line:active{transform:scale(.98);}.ds-action-line:focus-visible{outline:2px solid hsl(var(--ring,224 74% 45%));outline-offset:3px;}"
+    },
+    {
+      "name": "Title Block",
+      "kind": "custom",
+      "refersTo": "title-block-cell",
+      "description": "Hairline cell grid of label/value pairs; on every sheet header, carrying the Email link.",
+      "html": "<dl class=\"ds-title-block\"><div class=\"ds-tb-cell ds-tb-span\"><dt>Drawing</dt><dd>Revision history</dd></div><div class=\"ds-tb-cell\"><dt>Dwg no.</dt><dd>KF-02</dd></div><div class=\"ds-tb-cell\"><dt>Sheet</dt><dd>3 of 6</dd></div><div class=\"ds-tb-cell ds-tb-span\"><dt>Contact</dt><dd><a href=\"#\">Email Karim</a></dd></div></dl>",
+      "css": ".ds-title-block{font-family:'Archivo Variable',ui-sans-serif,system-ui,sans-serif;display:grid;grid-template-columns:1fr 1fr;border-top:1px solid hsl(var(--border,212 14% 80%));border-left:1px solid hsl(var(--border,212 14% 80%));margin:0;max-width:320px;background:hsl(var(--card,160 10% 98.5%));}.ds-tb-cell{border-right:1px solid hsl(var(--border,212 14% 80%));border-bottom:1px solid hsl(var(--border,212 14% 80%));padding:8px 12px;}.ds-tb-span{grid-column:span 2;}.ds-tb-cell dt{font-stretch:75%;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;font-size:11px;line-height:1;color:hsl(var(--muted-foreground,216 12% 33%));}.ds-tb-cell dd{margin:6px 0 0;font-size:14px;font-weight:500;font-variant-numeric:tabular-nums;color:hsl(var(--foreground,216 22% 9%));}.ds-tb-cell a{font-weight:600;color:hsl(var(--primary,224 74% 45%));text-decoration:underline;text-decoration-color:hsl(var(--primary,224 74% 45%)/.4);text-underline-offset:.22em;}.ds-tb-cell a:hover{text-decoration-color:hsl(var(--primary,224 74% 45%));}.ds-tb-cell a:focus-visible{outline:2px solid hsl(var(--ring,224 74% 45%));outline-offset:3px;}"
+    },
+    {
+      "name": "Sheet with Header",
+      "kind": "card",
+      "refersTo": "sheet",
+      "description": "The section container: frame-rule frame on Sheet White, condensed title, ruled header.",
+      "html": "<section class=\"ds-sheet\"><header class=\"ds-sheet__head\"><h2 class=\"ds-sheet__title\">Skills</h2><p class=\"ds-sheet__lede\">The working toolkit, listed as a bill of materials.</p></header><p class=\"ds-sheet__body\"><span class=\"ds-sheet__label\">Note</span>Content sits on hairline-ruled rows.</p></section>",
+      "css": ".ds-sheet{font-family:'Archivo Variable',ui-sans-serif,system-ui,sans-serif;background:hsl(var(--card,160 10% 98.5%));border:1px solid hsl(var(--rule,216 18% 22%));border-radius:0;color:hsl(var(--foreground,216 22% 9%));}.ds-sheet__head{padding:32px;border-bottom:1px solid hsl(var(--rule,216 18% 22%));}.ds-sheet__title{font-stretch:78%;font-weight:700;text-transform:uppercase;letter-spacing:-0.015em;line-height:0.92;font-size:56px;margin:0;}.ds-sheet__lede{margin:16px 0 0;font-size:18px;color:hsl(var(--muted-foreground,216 12% 33%));max-width:60ch;}.ds-sheet__body{margin:0;padding:20px 32px;font-size:16px;}.ds-sheet__label{font-stretch:75%;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;font-size:12px;color:hsl(var(--muted-foreground,216 12% 33%));margin-right:12px;}"
+    },
+    {
+      "name": "Balloon",
+      "kind": "chip",
+      "refersTo": "balloon",
+      "description": "Numbered item balloon referencing parts, disciplines and BOM rows.",
+      "html": "<span class=\"ds-balloon\">1</span> <span class=\"ds-balloon\">2</span> <span class=\"ds-balloon\">3</span>",
+      "css": ".ds-balloon{font-family:'Archivo Variable',ui-sans-serif,system-ui,sans-serif;display:inline-flex;width:24px;height:24px;align-items:center;justify-content:center;border-radius:9999px;border:1px solid hsl(var(--rule,216 18% 22%));background:hsl(var(--background,160 8% 96%));color:hsl(var(--foreground,216 22% 9%));font-size:11px;font-weight:600;font-variant-numeric:tabular-nums;}"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Sticky header with condensed lettering links and a 2px blue active underline on the bottom rule.",
+      "html": "<nav class=\"ds-nav\"><span class=\"ds-nav__brand\">Karim Feki</span><ul class=\"ds-nav__list\"><li><a href=\"#\" class=\"ds-nav__link\">Profile</a></li><li><a href=\"#\" class=\"ds-nav__link is-active\">Experience</a></li><li><a href=\"#\" class=\"ds-nav__link\">Projects</a></li></ul><a href=\"#\" class=\"ds-nav__cta\">Email Karim</a></nav>",
+      "css": ".ds-nav{font-family:'Archivo Variable',ui-sans-serif,system-ui,sans-serif;display:flex;align-items:center;justify-content:space-between;gap:16px;height:64px;padding:0 16px;background:hsl(var(--background,160 8% 96%));border-bottom:1px solid hsl(var(--rule,216 18% 22%)/.8);}.ds-nav__brand{font-stretch:75%;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;font-size:12px;}.ds-nav__list{display:flex;list-style:none;margin:0;padding:0;align-self:stretch;}.ds-nav__link{font-stretch:75%;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;position:relative;display:flex;align-items:center;height:100%;padding:0 16px;font-size:12px;color:hsl(var(--muted-foreground,216 12% 33%));text-decoration:none;transition:color .2s;}.ds-nav__link::after{content:'';position:absolute;left:16px;right:16px;bottom:-1px;height:2px;background:hsl(var(--primary,224 74% 45%));transform:scaleX(0);transform-origin:left;transition:transform .3s cubic-bezier(0.16,1,0.3,1);}.ds-nav__link:hover,.ds-nav__link.is-active{color:hsl(var(--foreground,216 22% 9%));}.ds-nav__link.is-active::after{transform:scaleX(1);}.ds-nav__link:focus-visible{outline:2px solid hsl(var(--ring,224 74% 45%));outline-offset:3px;}.ds-nav__cta{display:inline-flex;align-items:center;height:40px;padding:0 16px;background:hsl(var(--primary,224 74% 45%));color:hsl(var(--primary-foreground,0 0% 100%));font-size:14px;font-weight:600;text-decoration:none;transition:background-color .2s,color .2s;}.ds-nav__cta:hover{background:hsl(var(--foreground,216 22% 9%));color:hsl(var(--background,160 8% 96%));}"
+    },
+    {
+      "name": "Bill of Materials Row",
+      "kind": "custom",
+      "refersTo": "balloon",
+      "description": "Ruled table row: balloon, condensed category, dense parts list, tabular quantity; tints to the blue wash on hover.",
+      "html": "<table class=\"ds-bom\"><thead><tr><th>Item</th><th>Category</th><th>Parts</th><th class=\"ds-r\">Qty</th></tr></thead><tbody><tr><td><span class=\"ds-bom__balloon\">1</span></td><th>Languages</th><td>JavaScript, TypeScript, Kotlin, Swift</td><td class=\"ds-r\">4</td></tr><tr><td><span class=\"ds-bom__balloon\">2</span></td><th>Backend</th><td>Node.js, Spring Boot, Symfony</td><td class=\"ds-r\">3</td></tr></tbody></table>",
+      "css": ".ds-bom{font-family:'Archivo Variable',ui-sans-serif,system-ui,sans-serif;width:100%;border-collapse:collapse;text-align:left;color:hsl(var(--foreground,216 22% 9%));}.ds-bom thead th{font-stretch:75%;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;font-size:11px;color:hsl(var(--muted-foreground,216 12% 33%));padding:8px 16px;border-bottom:1px solid hsl(var(--border,212 14% 80%));}.ds-bom tbody tr{border-bottom:1px solid hsl(var(--border,212 14% 80%));transition:background-color .2s;}.ds-bom tbody tr:hover{background:hsl(var(--accent,222 60% 93%)/.6);}.ds-bom td,.ds-bom tbody th{padding:20px 16px;vertical-align:top;font-size:15px;line-height:1.625;}.ds-bom tbody th{font-stretch:75%;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;font-size:14px;}.ds-r{text-align:right;font-variant-numeric:tabular-nums;}.ds-bom__balloon{display:inline-flex;width:24px;height:24px;align-items:center;justify-content:center;border-radius:9999px;border:1px solid hsl(var(--rule,216 18% 22%));background:hsl(var(--background,160 8% 96%));font-size:11px;font-weight:600;}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Signed Drawing Set",
+    "overview": "**Creative North Star: \"The Signed Drawing Set\"**\n\nEvery surface is a sheet from an engineering drawing set. A sheet is a flat paper rectangle with a plotted 1px frame. Its information sits in labelled cells, ruled tables, numbered notes and balloons, not in floating cards. The light theme is drafting paper with a faint two-weight grid. The dark theme is the same drawing as a blueprint print: navy ground, pale linework. Both themes share the same geometry; only the ink and ground change.\n\nDensity follows a drawing, not a brochure. Titles are large condensed capitals. Metadata is set small in condensed tracked capitals inside hairline cells. Reading text stays at normal width and in sentence case. One drafting blue does all the accent and action work. Depth comes from linework weight (hairline vs. frame rule), never from shadow.\n\nMotion is the plotter. A sheet's frame lines draw themselves in on entry, top, right, bottom then left. Content is visible from the start and never waits on that animation.",
+    "keyCharacteristics": [
+      "Square corners everywhere. The only round shapes are item balloons and status dots.",
+      "Two line weights: hairline for cell and table divisions, frame rule for sheet edges and header underlines.",
+      "Condensed uppercase lettering for labels, titles and nav. Normal-width sentence case for prose.",
+      "One accent hue (drafting blue / blueprint cyan). Email is the only filled action.",
+      "Drawing vocabulary as structure: title blocks, zone markers, revision tables, bills of materials, general notes, figure callouts with leader lines."
+    ],
+    "rules": [
+      {
+        "name": "The One Blue Rule",
+        "body": "Drafting blue is the only chromatic hue. It marks linework accents and the contact action, and nothing decorative. Error red appears only in error states.",
+        "section": "colors"
+      },
+      {
+        "name": "The Ink-On-Hover Rule",
+        "body": "Every action, primary or outlined, fills with Drawing Ink and switches its text to the paper colour on hover. The interface never invents a lighter or darker shade of blue for hover.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two Widths Rule",
+        "body": "Condensed uppercase is for titles and labels. Anything meant to be read as a sentence uses normal width and sentence case.",
+        "section": "typography"
+      },
+      {
+        "name": "The Tabular Numbers Rule",
+        "body": "Drawing numbers, sheet counts, dates, quantities and note numbers always use tabular figures.",
+        "section": "typography"
+      },
+      {
+        "name": "The Linework-Not-Shadow Rule",
+        "body": "Separation is drawn: a hairline between cells, a frame rule around a sheet. If two things need separating, add a line, not a shadow or a blur.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** put every new section on a Sheet with a SheetHeader and Title Block, so Email is available from every sheet.",
+      "**Do** keep corners square (0px) on every rectangle, and limit circles to balloons, leader terminators and status dots.",
+      "**Do** separate content with hairlines (`hairline`) inside a sheet and frame rules (`frame-rule`) at sheet edges.",
+      "**Do** express structured content in drawing forms: labelled cells, ruled tables, numbered general notes, balloons with a legend.",
+      "**Do** use the out-expo curve (cubic-bezier(0.16, 1, 0.3, 1)) for transforms, and keep content visible regardless of animation state.",
+      "**Do** design both themes at once: each token has a paper value and a blueprint value."
+    ],
+    "donts": [
+      "**Don't** use rounded, shadowed or glassy cards. A container is a ruled rectangle.",
+      "**Don't** add a second accent hue, gradients or decorative blue fills. Blue is for linework accents and the contact action.",
+      "**Don't** set prose in condensed uppercase, or titles in normal-width sentence case.",
+      "**Don't** add shadows to anything that sits in the page flow. The only shadow is the modal viewer lift.",
+      "**Don't** hide content until a reveal animation runs. Only the frame lines animate in."
+    ]
+  }
+}

@@ -7,14 +7,19 @@ export default {
   theme: {
   	container: {
   		center: true,
-  		padding: '2rem',
+  		padding: {
+  			DEFAULT: '1rem',
+  			sm: '1.5rem',
+  			lg: '2rem'
+  		},
   		screens: {
-  			'2xl': '1400px'
+  			'2xl': '1360px'
   		}
   	},
   	extend: {
   		colors: {
   			border: 'hsl(var(--border))',
+  			rule: 'hsl(var(--rule))',
   			input: 'hsl(var(--input))',
   			ring: 'hsl(var(--ring))',
   			background: 'hsl(var(--background))',
@@ -109,38 +114,16 @@ export default {
 		},
   		fontFamily: {
   			sans: [
-  				'Inter',
+  				'"Archivo Variable"',
   				'ui-sans-serif',
   				'system-ui',
   				'-apple-system',
-  				'BlinkMacSystemFont',
-  				'Segoe UI',
-  				'Roboto',
-  				'Helvetica Neue',
-  				'Arial',
-  				'Noto Sans',
+  				'"Segoe UI"',
   				'sans-serif'
-  			],
-  			serif: [
-  				'Lora',
-  				'ui-serif',
-  				'Georgia',
-  				'Cambria',
-  				'Times New Roman',
-  				'Times',
-  				'serif'
-  			],
-  			mono: [
-  				'Space Mono',
-  				'ui-monospace',
-  				'SFMono-Regular',
-  				'Menlo',
-  				'Monaco',
-  				'Consolas',
-  				'Liberation Mono',
-  				'Courier New',
-  				'monospace'
   			]
+  		},
+  		transitionTimingFunction: {
+  			'out-expo': 'cubic-bezier(0.16, 1, 0.3, 1)'
   		},
   		boxShadow: {
   			'2xs': 'var(--shadow-2xs)',

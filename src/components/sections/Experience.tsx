@@ -1,289 +1,188 @@
-import { useEffect, useState } from "react";
-import { Button } from "@/components/ui/button";
-import { SectionHeader } from "@/components/ui/section-header";
-import { ScrollReveal } from "@/components/ui/scroll-reveal";
-import { Briefcase, Calendar, MapPin } from "lucide-react";
+import { useState } from "react";
+import { ArrowUpRight, Github } from "lucide-react";
+import { PartTags, Sheet, SheetHeader } from "@/components/drawing/Sheet";
+import { DocumentTrigger, DocumentViewer } from "@/components/drawing/DocumentViewer";
+import { internshipDocuments, type ViewerDocument } from "@/lib/documents";
 
-const experiences = [
+type ExperienceEntry = {
+  rev: string;
+  title: string;
+  company: string;
+  location: string;
+  period: string;
+  type: string;
+  summary?: string;
+  description: string[];
+  technologies: string[];
+  links?: { label: string; href: string }[];
+  certificate: ViewerDocument;
+};
+
+const experiences: ExperienceEntry[] = [
   {
+    rev: "C",
+    title: "Software Engineer Intern",
+    company: "STEG Tunisie",
+    location: "Tunis, Tunisia",
+    period: "Jul 2026 – Aug 2026",
+    type: "Hybrid",
+    summary:
+      "Contributed, within the project team, to the STEG Smart Internship & Administrative Workflow Platform: an enterprise solution that digitalises the internship lifecycle, from application and administrative processing to task supervision, document verification, evaluation and certificate issuance.",
+    description: [
+      "Contributed to the architecture of a multi-component platform combining web applications, a cross-platform mobile app, a central backend and dedicated AI services.",
+      "Implemented REST API integrations and backend features in Java, Spring Boot and PostgreSQL for business workflows, authentication, authorization and data management.",
+      "Developed AI document-intelligence services with Python, FastAPI, PyMuPDF and Tesseract OCR for document classification, information extraction, report analysis and verification.",
+      "Worked on role-based access control, JWT authentication, permission management and protected communication between internal services.",
+      "Contributed to Next.js, React and Angular interfaces in TypeScript for candidate applications and administrative management.",
+      "Took part in a Flutter companion app for task tracking, digital logbooks and supervisor interaction, with real-time messaging and notifications over STOMP and WebSocket.",
+      "Contributed to automated document processing and PDF generation, including internship journal compilation and certificate verification.",
+      "Applied engineering practice across system analysis, database design, API documentation, testing and technical documentation.",
+    ],
+    technologies: [
+      "Java",
+      "Spring Boot",
+      "PostgreSQL",
+      "Python",
+      "FastAPI",
+      "Tesseract OCR",
+      "PyMuPDF",
+      "Next.js",
+      "Angular",
+      "Flutter",
+      "WebSocket",
+      "Docker",
+    ],
+    links: [{ label: "Repository", href: "https://github.com/fekikarim/steg-project" }],
+    certificate: internshipDocuments.steg,
+  },
+  {
+    rev: "B",
     title: "Business Immersion Intern",
-    company: "STAR ASSURANCES",
+    company: "STAR Assurances",
     location: "La Goleta, Tunis",
     period: "Jun 2025 – Aug 2025",
     type: "Hybrid",
     description: [
-      "Designed and deployed a full-stack Challenge Management System to gamify sales performance",
-      "Developed a Flutter mobile application connected to an Express.js / Node.js backend with SQLite",
-      "Implemented real-time updates, role-based access control, and performance dashboards",
-      "Applied UI/UX best practices, REST API design, and Agile methodologies",
-      "Delivered a secure, scalable, and production-ready solution improving transparency and efficiency",
+      "Designed and deployed a full-stack Challenge Management System that gamifies sales performance.",
+      "Built a Flutter mobile application backed by an Express.js / Node.js API and SQLite.",
+      "Implemented real-time updates, role-based access control and performance dashboards.",
+      "Applied UI/UX best practices, REST API design and Agile methodology.",
+      "Delivered a secure, scalable, production-ready solution that improved transparency and efficiency.",
     ],
     technologies: ["Flutter", "Node.js", "Express.js", "SQLite", "REST API"],
-    certificate: {
-      label: "Internship Certificate",
-      src: "/certifs/attestation_de_stage_STAR.pdf",
-      type: "pdf",
-      alt: "STAR ASSURANCES internship certificate",
-    },
+    certificate: internshipDocuments.star,
   },
   {
+    rev: "A",
     title: "Full-Stack Developer Intern",
     company: "Tunisie Telecom",
     location: "Ariana, Tunisia",
     period: "Jun 2023 – Jul 2023",
     type: "Hybrid",
     description: [
-      "Developed a professional full-stack e-commerce platform using React.js",
-      "Improved user experience and application performance significantly",
-      "Collaborated effectively within a technical team under real deadlines",
-      "Received official internship certification for technical excellence",
+      "Developed a professional full-stack e-commerce platform with React.js.",
+      "Significantly improved user experience and application performance.",
+      "Collaborated within a technical team against real deadlines.",
+      "Received official internship certification for technical excellence.",
     ],
     technologies: ["React.js", "JavaScript", "CSS", "REST API"],
-    certificate: {
-      label: "Internship Certificate",
-      src: "/certifs/attestation_de_stage_TT.jpeg",
-      type: "image",
-      alt: "Tunisie Telecom internship certificate",
-    },
+    certificate: internshipDocuments.tt,
   },
 ];
 
-type Certificate = {
-  label: string;
-  src: string;
-  type: "pdf" | "image";
-  alt: string;
-};
-
-type CertificatePreviewProps = {
-  company: string;
-  certificate: Certificate;
-  onOpen: (payload: { company: string; certificate: Certificate }) => void;
-};
-
-function CertificatePreview({ company, certificate, onOpen }: CertificatePreviewProps) {
-  return (
-    <Button
-      variant="outline"
-      size="sm"
-      className="mt-4"
-      onClick={() => onOpen({ company, certificate })}
-    >
-      Preview Certificate
-    </Button>
-  );
-}
+const certificates = experiences.map((exp) => exp.certificate);
 
 export function Experience() {
-  const [activeCert, setActiveCert] = useState<
-    null | { company: string; certificate: Certificate }
-  >(null);
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [hasError, setHasError] = useState(false);
-
-  useEffect(() => {
-    if (activeCert) {
-      setIsLoaded(false);
-      setHasError(false);
-    }
-  }, [activeCert]);
-
-  useEffect(() => {
-    if (!activeCert) {
-      return undefined;
-    }
-
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape") {
-        setActiveCert(null);
-      }
-    };
-
-    document.body.style.overflow = "hidden";
-    window.addEventListener("keydown", handleKeyDown);
-
-    return () => {
-      document.body.style.overflow = "";
-      window.removeEventListener("keydown", handleKeyDown);
-    };
-  }, [activeCert]);
-
-  const handleOpenPreview = (payload: { company: string; certificate: Certificate }) => {
-    setActiveCert(payload);
-  };
-
-  const handleClosePreview = () => {
-    setActiveCert(null);
-  };
+  const [active, setActive] = useState<number | null>(null);
 
   return (
-    <section id="experience" className="section-padding bg-card/50">
-      <div className="container mx-auto px-4 md:px-6">
-        <ScrollReveal>
-          <SectionHeader
-            badge="Experience"
-            title="Professional Journey"
-            description="Real-world experience building production-grade solutions"
-          />
-        </ScrollReveal>
+    <div className="container py-10 lg:py-16">
+      <Sheet id="experience" labelledBy="experience-title">
+        <SheetHeader
+          id="experience-title"
+          title="Experience"
+          lede="Production systems shipped during internships, each backed by an official certificate."
+          drawing="Revision history"
+          number="KF-02"
+          sheet="3 of 7"
+        />
 
-        <div className="max-w-5xl mx-auto">
-          <div className="relative">
-            {/* Timeline Line */}
-            <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-border/80 md:-translate-x-px" />
-
-            {experiences.map((exp, index) => (
-              <ScrollReveal
-                key={exp.title}
-                delay={index * 150}
-                direction={index % 2 === 0 ? "left" : "right"}
-              >
-                <div className="relative mb-12 md:mb-16 last:mb-0">
-                  {/* Timeline Dot */}
-                  <div className="absolute left-4 md:left-1/2 top-6 w-4 h-4 rounded-full bg-primary border-4 border-background -translate-x-1/2 z-10 shadow-sm" />
-
-                  <div className="pl-10 md:pl-0 md:grid md:grid-cols-2 md:gap-12">
-                    {/* Card */}
-                    <div
-                      className={`w-full md:max-w-[520px] ${
-                        index % 2 === 0
-                          ? "md:col-start-1 md:justify-self-end md:pr-6"
-                          : "md:col-start-2 md:justify-self-start md:pl-6"
-                      } glass rounded-xl p-6 border border-border/60 bg-card/70 shadow-lg hover:shadow-xl transition-shadow`}
-                    >
-                    <div className="flex flex-wrap items-center gap-2 mb-3">
-                      <span className="inline-flex items-center gap-1 text-xs font-medium text-primary bg-primary/10 px-2 py-1 rounded-full">
-                        <Briefcase className="w-3 h-3" />
-                        {exp.company}
-                      </span>
-                      <span className="inline-flex items-center gap-1 text-xs text-muted-foreground">
-                        <MapPin className="w-3 h-3" />
-                        {exp.location} • {exp.type}
-                      </span>
-                    </div>
-
-                    <h3 className="text-xl font-bold text-foreground mb-1">
-                      {exp.title}
-                    </h3>
-
-                    <div className="flex items-center gap-1 text-sm text-muted-foreground mb-4">
-                      <Calendar className="w-4 h-4" />
-                      {exp.period}
-                    </div>
-
-                    <ul className="space-y-2 mb-4">
-                      {exp.description.map((item, i) => (
-                        <li
-                          key={i}
-                          className="flex items-start gap-2 text-sm text-foreground/80"
-                        >
-                          <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-
-                    <div className="flex flex-wrap gap-2">
-                      {exp.technologies.map((tech) => (
-                        <span
-                          key={tech}
-                          className="px-2 py-1 text-xs font-medium bg-secondary/50 text-secondary-foreground rounded-md"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-
-                    {exp.certificate && (
-                      <CertificatePreview
-                        company={exp.company}
-                        certificate={exp.certificate}
-                        onOpen={handleOpenPreview}
-                      />
-                    )}
-                    </div>
-                  </div>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
+        {/* Column heads of the revision table */}
+        <div
+          aria-hidden
+          className="hidden lg:grid grid-cols-12 gap-10 border-b border-border px-10 py-2 lettering text-[11px] text-muted-foreground"
+        >
+          <span className="col-span-3">Rev · Period</span>
+          <span className="col-span-6">Description</span>
+          <span className="col-span-3">Approval</span>
         </div>
-      </div>
 
-      {activeCert && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center px-4 py-6">
-          <button
-            type="button"
-            className="absolute inset-0 bg-black/70 backdrop-blur-sm"
-            onClick={handleClosePreview}
-            aria-label="Close certificate preview"
-          />
-          <div className="relative z-10 flex h-[min(86vh,780px)] w-[min(94vw,980px)] flex-col overflow-hidden rounded-2xl border border-border/60 bg-background/95 shadow-2xl">
-            <div className="flex flex-wrap items-center justify-between gap-4 border-b bg-background/90 px-6 py-5">
-              <div className="space-y-1">
-                <p className="text-sm font-medium text-muted-foreground">{activeCert.company}</p>
-                <h3 className="text-lg font-semibold text-foreground">
-                  {activeCert.certificate.label}
-                </h3>
+        <ol>
+          {experiences.map((exp, index) => (
+            <li key={exp.company} className="grid gap-6 border-b border-border last:border-b-0 p-5 sm:p-8 lg:grid-cols-12 lg:gap-10 lg:px-10">
+              <div className="lg:col-span-3 flex lg:flex-col gap-4 lg:gap-3">
+                <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center border border-rule display text-2xl">
+                  {exp.rev}
+                </span>
+                <div className="text-sm">
+                  <p className="font-semibold text-foreground tabular-nums">{exp.period}</p>
+                  <p className="text-muted-foreground">
+                    {exp.location} · {exp.type}
+                  </p>
+                </div>
               </div>
-              <div className="flex flex-wrap items-center gap-2">
-                <Button variant="outline" size="sm" asChild>
+
+              <div className="lg:col-span-6">
+                <h3 className="text-2xl font-semibold tracking-tight text-foreground">{exp.title}</h3>
+                <p className="lettering mt-1 text-xs text-primary">{exp.company}</p>
+                {exp.summary && (
+                  <p className="mt-4 max-w-[68ch] text-base leading-relaxed text-foreground">{exp.summary}</p>
+                )}
+                <ul className="mt-5 space-y-2.5">
+                  {exp.description.map((item) => (
+                    <li key={item} className="grid grid-cols-[1rem_1fr] text-[15px] leading-relaxed text-foreground">
+                      <span aria-hidden className="mt-[0.7em] h-px w-2.5 bg-rule" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+                <div className="mt-6">
+                  <p className="lettering text-[11px] text-muted-foreground">Material</p>
+                  <PartTags className="mt-2" items={exp.technologies} label={`Technologies used at ${exp.company}`} />
+                </div>
+              </div>
+
+              <div className="lg:col-span-3 flex flex-col gap-2">
+                <DocumentTrigger
+                  doc={exp.certificate}
+                  onOpen={() => setActive(index)}
+                  caption={`Issued by ${exp.company}`}
+                />
+                {exp.links?.map((link) => (
                   <a
-                    href={activeCert.certificate.src}
+                    key={link.href}
+                    href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
+                    className="group flex min-h-11 items-center gap-3 border border-border p-3 text-sm font-semibold text-foreground transition-colors duration-200 hover:border-rule hover:bg-foreground hover:text-background"
                   >
-                    Open in new tab
+                    <Github className="h-5 w-5 shrink-0" strokeWidth={1.5} aria-hidden />
+                    <span className="flex-1">{link.label}</span>
+                    <ArrowUpRight
+                      aria-hidden
+                      className="h-3.5 w-3.5 text-muted-foreground transition-transform duration-300 ease-out-expo group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-background"
+                      strokeWidth={1.5}
+                    />
+                    <span className="sr-only">for the {exp.company} project (opens in a new tab)</span>
                   </a>
-                </Button>
-                <Button variant="outline" size="sm" asChild>
-                  <a href={activeCert.certificate.src} download>
-                    Download
-                  </a>
-                </Button>
-                <Button variant="ghost" size="sm" onClick={handleClosePreview}>
-                  Close
-                </Button>
+                ))}
               </div>
-            </div>
+            </li>
+          ))}
+        </ol>
+      </Sheet>
 
-            <div className="relative flex-1 min-h-0 bg-muted/30 p-4">
-              {!isLoaded && !hasError && (
-                <div className="absolute inset-0 z-10 flex items-center justify-center bg-background/70 backdrop-blur-sm">
-                  <div className="text-sm text-muted-foreground animate-pulse">
-                    Loading certificate preview...
-                  </div>
-                </div>
-              )}
-
-              <div className="h-full w-full rounded-xl border border-border/70 bg-background shadow-sm">
-                {hasError ? (
-                  <div className="flex h-full items-center justify-center px-6 text-sm text-muted-foreground">
-                    We could not load the preview. Please open the file in a new tab or download it.
-                  </div>
-                ) : activeCert.certificate.type === "pdf" ? (
-                  <iframe
-                    src={`${activeCert.certificate.src}#toolbar=0&navpanes=0&view=FitH`}
-                    title={`${activeCert.company} certificate preview`}
-                    className="h-full w-full rounded-xl"
-                    onLoad={() => setIsLoaded(true)}
-                    onError={() => setHasError(true)}
-                  />
-                ) : (
-                  <img
-                    src={activeCert.certificate.src}
-                    alt={activeCert.certificate.alt}
-                    className="h-full w-full rounded-xl object-contain"
-                    loading="lazy"
-                    onLoad={() => setIsLoaded(true)}
-                    onError={() => setHasError(true)}
-                  />
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-    </section>
+      <DocumentViewer documents={certificates} index={active} onIndexChange={setActive} />
+    </div>
   );
 }
